@@ -1,5 +1,8 @@
 package Main_P;
 import Tools.Util;
+import Trip_P.BeachTrip;
+import Trip_P.SkiTrip;
+import Trip_P.Trip;
 import Trip_P.TripManager;
 
 import java.io.IOException;
@@ -32,7 +35,7 @@ public class UI {
                         System.out.println("------------------------");
                         System.out.println("------Creating Trip-----");
                         System.out.println("------------------------");
-                        TripManager.createTrip();
+                        createTrip();
                         break;
                     case 2:
                         System.out.println();
@@ -71,5 +74,55 @@ public class UI {
 
         }
 
+    }
+    public static void createTrip() throws InputMismatchException {
+
+        boolean tryToCreateTrip = true;
+
+        while (tryToCreateTrip) {
+
+            System.out.println("Please choose what type of Trip you would like");
+            System.out.println("Enter 1 for a Standard Trip");
+            System.out.println("Enter 2 for a Beach Trip");
+            System.out.println("Enter 3 for a Ski Trip");
+            System.out.println("Enter 4 to go back to Main Menu");
+        try {
+            int switchNav = Util.intScan();
+            switch (switchNav) {
+                    case 1:
+                        TripManager.createStandardTrip();
+                        tryToCreateTrip = false;
+                        break;
+                    case 2:
+                        TripManager.createBeachTrip();
+                        tryToCreateTrip = false;
+                        break;
+
+                    case 3:
+                        TripManager.createSkiTrip();
+                        tryToCreateTrip = false;
+                        break;
+
+                    case 4:
+                        tryToCreateTrip = false;
+                        break;
+
+                    default:
+                        tryToCreateTrip = false;
+                        System.out.println();
+                        System.out.println("------------------------");
+                        System.out.println("Please enter a valid int");
+                        System.out.println("------------------------");
+                        System.out.println();
+                        createTrip();
+            }
+        } catch (InputMismatchException e) {
+                System.out.println("-------------------------------");
+                System.out.println("Invalid input type, try again...");
+                System.out.println("-------------------------------");
+                tryToCreateTrip = false;
+                createTrip();
+        }
+        }
     }
 }
