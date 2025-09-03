@@ -2,21 +2,21 @@ package Trip_P;
 
 public class SkiTrip extends Trip {
 
-    boolean isSkipTrip;
+    boolean warmDrinks;
     boolean isRentingEquipment;
 
-    public SkiTrip (String country, int duration, boolean hotel, boolean flight, boolean isSkipTrip, boolean isRentingEquipment) {
+    public SkiTrip (String country, int duration, boolean hotel, boolean flight, boolean warmDrinks, boolean isRentingEquipment) {
         super(country, duration, hotel, flight);
-        this.isSkipTrip = isSkipTrip;
+        this.warmDrinks = warmDrinks;
         this.isRentingEquipment = isRentingEquipment;
 
     }
 
-    public boolean getSkipTrip() {
-        return this.isSkipTrip;
+    public boolean getWarmDrink() {
+        return this.warmDrinks;
     }
-    public boolean setSkiTrip(boolean isSkipTrip) {
-        return this.isSkipTrip = isSkipTrip;
+    public boolean setWarmDrink(boolean warmDrinks) {
+        return this.warmDrinks = warmDrinks;
     }
     public boolean getRentingEquipment() {
         return this.isRentingEquipment;
@@ -27,8 +27,8 @@ public class SkiTrip extends Trip {
 
     public String toString(){
        return super.toString() +
-        "SkiTrip   : " + this.isSkipTrip + "\n" +
-        "Renting Equipment   : " + this.isRentingEquipment + "\n";
+        "Warm Drinks: " + this.warmDrinks + "\n" +
+        "Renting Ski Equipment: " + this.isRentingEquipment;
 
     }
 

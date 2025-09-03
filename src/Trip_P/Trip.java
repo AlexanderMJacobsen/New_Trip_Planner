@@ -42,10 +42,10 @@ public class Trip {
 
     public String toString(){
         return
-        "Country   : " + this.country + "\n" +
-        "Duration  : " + this.duration + " days\n" +
-        "Hotel     : " + this.hotel + "\n" +
-        "Flight   : " + this.flight;
+        "Country: " + this.country + "\n" +
+        "Duration: " + this.duration + " days\n" +
+        "Hotel: " + this.hotel + "\n" +
+        "Flight: " + this.flight;
 
 
 
