@@ -88,7 +88,7 @@ public class TripManager {
         System.out.println("Flight Enter (True||False): ");
         boolean flight = Util.booleanScan();
 
-        System.out.println("Swimp Equipment Enter (True||False): ");
+        System.out.println("Swim Equipment Enter (True||False): ");
         boolean swimEquipment = Util.booleanScan();
 
         System.out.println("Sunscreen Enter (True||False): ");
