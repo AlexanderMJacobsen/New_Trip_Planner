@@ -2,17 +2,26 @@ package Trip_P;
 
 public class Trip {
 
+    int tripID;
     String country;
     int duration;
     boolean hotel;
     boolean flight;
 
-    public Trip (String country, int duration, boolean hotel, boolean flight) {
+    public Trip (int tripID, String country, int duration, boolean hotel, boolean flight) {
+        this.tripID = tripID;
         this.country = country;
         this.duration = duration;
         this.hotel = hotel;
         this.flight = flight;
 
+    }
+
+    public int getTripID() {
+        return this.tripID;
+    }
+    public int setID(int newID) {
+        return this.tripID = newID;
     }
 
     public String getCountry() {
@@ -42,6 +51,7 @@ public class Trip {
 
     public String toString(){
         return
+        "TripID:  " + this.tripID + "\n" +
         "Country: " + this.country + "\n" +
         "Duration: " + this.duration + " days\n" +
         "Hotel: " + this.hotel + "\n" +

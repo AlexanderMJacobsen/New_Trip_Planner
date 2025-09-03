@@ -5,8 +5,8 @@ public class BeachTrip extends Trip {
     boolean swimEquipment;
     boolean sunscreen;
 
-    public BeachTrip(String country, int duration, boolean hotel, boolean flight, boolean swimEquipment, boolean sunscreen) {
-        super(country,duration,hotel, flight);
+    public BeachTrip(int tripID, String country, int duration, boolean hotel, boolean flight, boolean swimEquipment, boolean sunscreen) {
+        super(tripID, country,duration,hotel, flight);
         this.swimEquipment = swimEquipment;
         this.sunscreen = sunscreen;
     }

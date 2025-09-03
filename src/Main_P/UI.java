@@ -49,7 +49,7 @@ public class UI {
                         System.out.println("------------------------");
                         System.out.println("-----Editing Trips------");
                         System.out.println("------------------------");
-                        TripManager.viewTrips();
+                        TripManager.editTrips();
                         break;
                     case 4:
                         System.out.println("Exiting, thank you for using the Travel Planner");
