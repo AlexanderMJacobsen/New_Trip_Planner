@@ -42,14 +42,16 @@ public class UI {
                         System.out.println("------------------------");
                         System.out.println("------Viewing Trips-----");
                         System.out.println("------------------------");
-                        TripManager.viewTrips();
+                        System.out.println();
+                        tripViewer();
                         break;
                     case 3:
                         System.out.println();
                         System.out.println("------------------------");
                         System.out.println("-----Editing Trips------");
                         System.out.println("------------------------");
-                        TripManager.editTrips();
+                        System.out.println();
+                        tripEditor();
                         break;
                     case 4:
                         System.out.println("Exiting, thank you for using the Travel Planner");
@@ -123,6 +125,32 @@ public class UI {
                 tryToCreateTrip = false;
                 createTrip();
         }
+        }
+    }
+    public static void tripViewer() {
+        if (TripManager.trips.isEmpty()) {
+            System.out.println("-------------------------------");
+            System.out.println("There is currently no trips");
+            System.out.println("-------------------------------");
+            System.out.println();
+        }
+        else {
+            TripManager.viewTrips();
+        }
+    }
+    public static void tripEditor() {
+
+        if (TripManager.trips.isEmpty()) {
+            System.out.println("-------------------------------");
+            System.out.println("There is currently no trips");
+            System.out.println("-------------------------------");
+            System.out.println();
+        }
+        else {
+            TripManager.viewTrips();
+            System.out.println("Enter ID of trip you want to Edit");
+            System.out.println("-------------------------------");
+            TripManager.editTrips();
         }
     }
 }
